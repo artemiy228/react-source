@@ -1,0 +1,15 @@
+.profile-banner {
+  text-align: center;
+}
+.profile-user {
+  display: flex;
+  padding-left: 105px;
+  font-size: 24px;
+  margin-top: 20px;
+  .profile-photo {
+    padding-right: 20px;
+  }
+  .profile-information {
+    line-height: 1.3;
+  }
+}

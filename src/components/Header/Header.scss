@@ -1,0 +1,14 @@
+.header {
+  width: 100%;
+  height: 100px;
+  background: #000;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo-photo {
+    width: 150px;
+    height: 100px;
+  }
+}

@@ -3,7 +3,6 @@ import Header from "./components/Header/Header";
 import SideBar from "./components/SideBar/Sidebar";
 import Router from "./components/Router/Router";
 
-
 const App = () => {
   return (
     <div className="App">

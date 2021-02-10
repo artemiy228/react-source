@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./SideBar.scss";
 
 const SideBar = () => {
@@ -6,14 +7,15 @@ const SideBar = () => {
       <div className="container">
         <ul className="sidebar-menu">
           <li className="menu-item">
-            <a className="menu-link" href="#2">
+            <Link className="menu-link" to="/">
               Profile
-            </a>
+            </Link>
           </li>
+          
           <li className="menu-item">
-            <a className="menu-link" href="#2">
+            <Link className="menu-link" to="/dialogs">
               Message
-            </a>
+            </Link>
           </li>
           <li className="menu-item">
             <a className="menu-link" href="#2">
@@ -22,7 +24,7 @@ const SideBar = () => {
           </li>
           <li className="menu-item">
             <a className="menu-link" href="#2">
-              Musik
+              Music
             </a>
           </li>
           <li className="menu-item">

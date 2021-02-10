@@ -1,16 +1,13 @@
 .my-post {
   margin-top: 20px;
-  padding-left: 105px;
+  padding:0 105px 0 105px;
   .post-title {
     font-size: 26px;
     margin-bottom: 10px;
     max-width: 1200px;
   }
   .post-textarea {
-    max-width: 1200px;
-    max-height: 100px;
-    min-height: 100px;
-    min-width: 1200px;
+    width: 100%;
     padding: 10px;
     font-size: 20px;
     color: #333333;

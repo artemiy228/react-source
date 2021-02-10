@@ -1,7 +1,9 @@
 import './Profile.scss'
+import Posts from "../Posts/Posts";
 
 const Profile = () => {
 	return (
+		<>
 		<div className="profile">
 			<div className="profile-banner">
 				<img src="https://via.placeholder.com/1440x224" alt="photo12"/>
@@ -29,6 +31,8 @@ const Profile = () => {
 				</div>
 			</div>
 		</div>
+		<Posts />
+		</>
 	) 
 }
 

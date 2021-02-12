@@ -3,7 +3,7 @@ import Profile from "../Profile/Profile";
 import Dialogs from '../Dialogs/Dialogs'
 import News from '../News/News'
 import Music from '../Music/Music'
-import Setting from '../Settings/Settings'
+import Settings from '../Settings/Settings'
 import {
   Switch,
   Route,
@@ -14,21 +14,13 @@ const Router = () => {
   return (
     <div className="content">
       <Switch>
-        <Route exact path="/profile">
-          <Profile />
-        </Route>
-        <Route exact path="/dialogs">
-          <Dialogs />
-        </Route>
-        <Route exact path="/news">
-          <News />
-        </Route>
-        <Route exact path="/music">
-          <Music />
-        </Route>
-        <Route exact path="/settings">
-          <Setting />
-        </Route>
+
+        <Route  path="/profile" component={ Profile }/>
+        <Route  path="/dialogs" component={ Dialogs }/>
+        <Route  path="/news" component={ News }/>
+        <Route  path="/music" component={ Music }/>
+        <Route  path="/settings" component={ Settings }/>
+
       </Switch>
     </div>
   )

@@ -1,0 +1,49 @@
+.dialogs {
+  display: flex;
+  height: 100%;
+  .all-dialogs {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-right: 1px solid white;
+    width: 20%;
+  }
+  .dialogs-message {
+    width: 80%;
+    margin-left: 30px;
+  }
+  .dialogs-list {
+    display: flex;
+    padding: 0 0 20px;
+    font-size: 20px;
+  }
+  .dialogs-name {
+    padding-left: 10px;
+  }
+  .dialogs-user {
+    display: flex;
+    align-items: center;
+    &-photo {
+      text-align: center;
+      margin-top: 20px;
+      img {
+        border-radius: 50%;
+      }
+    }
+    &-info {
+      text-align: center;
+    }
+    &-name {
+      font-size: 20px;
+    }
+    &-message {
+      margin-left: 20px;
+      max-width: 500px;
+      padding: 10px;
+      border: 1px solid whitesmoke;
+      border-radius: 3px;
+    }
+  }
+}
+.dialogs-list {
+}

@@ -9,6 +9,7 @@
   }
   .menu-item + .menu-item {
     margin-top: 10px;
+
   }
   .friends {
     display: flex;
@@ -34,4 +35,7 @@
       }
     }
   }
+}
+.menu-link.active {
+  color: purple;
 }

@@ -9,6 +9,7 @@ const DialogNameList = ({name, id}) => {
     </div>
   )
 }
+
 const DialogDescriptionMessage = ({description}) => {
   return (
     <div className="dialogs-user-message">
@@ -29,13 +30,20 @@ const DialogNameMessage = ({name}) => {
           </div>
         </div>
         <DialogDescriptionMessage description={"Hello, my Friends!"}/>
-        <DialogDescriptionMessage description={"Hello, my Bad Finger!"}/>
     </div>
   )
 }
 
 
 const Dialogs = () => {
+  /* All dialogs information */
+  let infoData = [
+    {name: 'Ashot',  id: 1},
+    {name: 'Viktor', id: 2},
+    {name: 'Nikita', id: 3}
+  ]
+  const dialogElement = infoData.map( dialog => <DialogNameList name={dialog.name}  id={dialog.id}/>)
+
   return (
      /* Title Block*/
     <div className={'dialogs'}>
@@ -44,10 +52,7 @@ const Dialogs = () => {
       </div>
       {/* One Block*/}
       <div className="all-dialogs">
-        <DialogNameList name={"Ashot"}  id={"1"}/>
-        <DialogNameList name={"Viktor"} id={"2"}/>
-        <DialogNameList name={"Nikita"} id={"3"}/>
-        <DialogNameList name={"Valera"} id={"4"}/>
+        { dialogElement }
       </div>
 
       {/* Two block */}

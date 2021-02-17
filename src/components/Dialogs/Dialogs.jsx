@@ -27,22 +27,11 @@ const DialogNameMessage = ({name, message}) => {
     </div>
   )
 }
-const dialogNameMessages = [
-  { message: 'Hello', name: 'Valera', id: 1} ,
-  { message: 'Hello', name: 'Nikita', id: 2} ,
-  { message: 'Hello', name: 'Artem', id: 3} ,
-  { message: 'Hello', name: 'Dmitriy', id: 4} ,
-  { message: 'Hello', name: 'Valera', id: 5}
-]
 
 
-const Dialogs = () => {
+const Dialogs = ({infoData, dialogNameMessages}) => {
   /* All dialogs information */
-  let infoData = [
-    {name: 'Ashot',  id: 1},
-    {name: 'Viktor', id: 2},
-    {name: 'Nikita', id: 3}
-  ]
+
   const dialogElement = infoData.map( dialog => <DialogNameList name={dialog.name}  id={dialog.id}/>)
 
   return (

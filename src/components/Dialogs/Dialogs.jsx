@@ -1,5 +1,5 @@
 import './Dialogs.scss'
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const DialogNameList = ({name, id}) => {
   return (
@@ -10,15 +10,7 @@ const DialogNameList = ({name, id}) => {
   )
 }
 
-const DialogDescriptionMessage = ({description}) => {
-  return (
-    <div className="dialogs-user-message">
-      {description}
-    </div>
-  )
-}
-
-const DialogNameMessage = ({name}) => {
+const DialogNameMessage = ({name, message}) => {
   return (
       <div className="dialogs-user">
         <div className="dialog-user-info">
@@ -26,13 +18,22 @@ const DialogNameMessage = ({name}) => {
             <img src="https://via.placeholder.com/100" alt=""/>
           </div>
           <div className="dialogs-user-name">
-            name: {name}
+            name: { name }
           </div>
         </div>
-        <DialogDescriptionMessage description={"Hello, my Friends!"}/>
+        <div className="dialogs-user-message">
+          { message }
+        </div>
     </div>
   )
 }
+const dialogNameMessages = [
+  { message: 'Hello', name: 'Valera', id: 1} ,
+  { message: 'Hello', name: 'Nikita', id: 2} ,
+  { message: 'Hello', name: 'Artem', id: 3} ,
+  { message: 'Hello', name: 'Dmitriy', id: 4} ,
+  { message: 'Hello', name: 'Valera', id: 5}
+]
 
 
 const Dialogs = () => {
@@ -57,8 +58,11 @@ const Dialogs = () => {
 
       {/* Two block */}
       <div className="dialogs-message">
-        <DialogNameMessage name={"Sasha"}/>
-        <DialogNameMessage name={"Ashot"}/>
+        { dialogNameMessages.map(dialogNameMessage => (<DialogNameMessage
+          name={dialogNameMessage.name}
+          message={dialogNameMessage.message}
+          id={dialogNameMessage.id}
+          key={dialogNameMessage.id} />)) }
       </div>
     </div>
 

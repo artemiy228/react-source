@@ -10,12 +10,14 @@ import {
 } from "react-router-dom";
 
 
-const Router = () => {
+const Router = ({infoPost}) => {
   return (
     <div className="content">
       <Switch>
 
-        <Route  path="/profile" component={ Profile }/>
+         <Route path="/profile">
+            <Profile infoPost={infoPost}/>
+          </Route>
         <Route  path="/dialogs" component={ Dialogs }/>
         <Route  path="/news" component={ News }/>
         <Route  path="/music" component={ Music }/>

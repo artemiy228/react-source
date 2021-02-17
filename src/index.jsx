@@ -4,10 +4,16 @@ import "./index.css";
 import App from "./App";
 import { BrowserRouter as Router } from "react-router-dom";
 
+let infoPost = [
+  {message: "Hi, how are you?", likeCount: 12},
+  {message: "Hi, my name is Dmitriy", likeCount: 5},
+  {message: "Hello my friend your mum is ded", likeCount: 31}
+]
+
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <App />
+      <App infoPost={infoPost} />
     </Router>
   </React.StrictMode>,
   document.getElementById("root")

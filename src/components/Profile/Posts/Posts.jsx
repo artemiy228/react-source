@@ -1,13 +1,9 @@
 import './Posts.scss'
 import NewPost from './NewPost'
 
-const Posts = () => {
+const Posts = ({infoPost}) => {
   /* Message and like counter for NewPost component*/
-  let infoPost = [
-    {message: "Hi, how are you?", likeCount: 12},
-    {message: "Hi, my name is Dmitriy", likeCount: 5},
-    {message: "Hello my friend your mum is ded", likeCount: 31}
-  ]
+  // ТУТ ДОЛЖЕН БЫТЬ МАССИВ  { infoPost }
   /* Отрисовка всех эл infoPost циклом */
   const postElements = infoPost.map( post => <NewPost message={post.message} likeCount={post.likeCount}/>)
 

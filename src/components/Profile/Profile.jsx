@@ -2,12 +2,14 @@ import './Profile.scss'
 import Posts from "./Posts/Posts";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
-const Profile = () => {
+const Profile = ({infoPost}) => {
+	console.log(infoPost)
 	return (
 		<>
 		<ProfileInfo />
-		<Posts />
+		<Posts infoPost={infoPost}/>
 		</>
+
 	) 
 }
 

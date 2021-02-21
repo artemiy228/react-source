@@ -2,12 +2,11 @@ import './Profile.scss'
 import Posts from "./Posts/Posts";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
-const Profile = ({infoPosts}) => {
-	console.log(infoPosts)
+const Profile = ({profile}) => {
 	return (
 		<>
 		<ProfileInfo />
-		<Posts infoPost={infoPosts} />
+		<Posts infoPosts={profile.infoPosts} />
 		</>
 
 	) 

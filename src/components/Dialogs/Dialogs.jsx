@@ -28,11 +28,11 @@ const DialogNameMessage = ({name, message}) => {
   )
 }
 
-
-const Dialogs = ({infoData, dialogNameMessages}) => {
+/* Деструктурировать все пропсы дабы не было dialogs.infoDataName and dialogs.dialogNameMessages */
+const Dialogs = ({dialogs}) => {
   /* All dialogs information */
-
-  const dialogElement = infoData.map( dialog => <DialogNameList name={dialog.name}  id={dialog.id}/>)
+  {/*Криво, коряво, но оно работает. Переделать.*/}
+  const dialogElement = dialogs.infoDataName.map( dialog => <DialogNameList name={dialog.name}  id={dialog.id}/>)
 
   return (
      /* Title Block*/
@@ -44,10 +44,10 @@ const Dialogs = ({infoData, dialogNameMessages}) => {
       <div className="all-dialogs">
         { dialogElement }
       </div>
-
+      {/*Криво, коряво, но оно работает. Переделать.*/}
       {/* Two block */}
       <div className="dialogs-message">
-        { dialogNameMessages.map(dialogNameMessage => (<DialogNameMessage
+        { dialogs.dialogNameMessages.map(dialogNameMessage => (<DialogNameMessage
           name={dialogNameMessage.name}
           message={dialogNameMessage.message}
           id={dialogNameMessage.id}

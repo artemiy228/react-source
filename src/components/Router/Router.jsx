@@ -10,16 +10,16 @@ import {
 } from "react-router-dom";
 
 
-const Router = ({infoPosts, infoData, dialogNameMessages}) => {
+const Router = ({state}) => {
   return (
     <div className="content">
       <Switch>
 
          <Route path="/profile">
-            <Profile infoPosts={infoPosts} infoData={infoData} dialogNameMessages={dialogNameMessages}/>
+            <Profile profile={state.profile}/>
           </Route>
          <Route path="/Dialogs">
-            <Dialogs infoData={infoData} dialogNameMessages={dialogNameMessages}/>
+            <Dialogs dialogs={state.dialogs}/>
          </Route>
         {/* Способ через рендер! ↓ Тоже можно, даже желательно, говорят он быстрее. ↓*/}
         {/*<Route path="/profile" render={() => <Profile infoPosts={infoPosts} infoData={infoData} dialogNameMessages={dialogNameMessages}/>}/>*/}
